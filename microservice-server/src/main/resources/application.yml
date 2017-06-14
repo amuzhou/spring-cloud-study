@@ -1,0 +1,17 @@
+server:
+  port: 8040
+  eureka-port: 8050
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:${server.eureka-port}/eureka/
+spring:
+  profiles:
+    active: native
+  application:
+    name: microservice-server
+  cloud:
+    config:
+      server:
+        native:
+           search-locations: file:/Users/zhoumeng750/Documents/idea/spring-cloud-study/config-repo
