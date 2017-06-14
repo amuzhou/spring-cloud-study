@@ -28,7 +28,7 @@ public class EurekaController {
     private DiscoveryClient client;
 
     @RequestMapping(value = "/add", method = { RequestMethod.GET, RequestMethod.POST })
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
+    public Integer add(@RequestParam(value="a",required = false) Integer a, @RequestParam(value="b",required = false) Integer b) {
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer result = eurekaService.add(a, b);
         logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:"

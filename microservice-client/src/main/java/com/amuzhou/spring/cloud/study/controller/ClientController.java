@@ -32,7 +32,7 @@ public class ClientController {
         parMap.put("a", a);
         parMap.put("b", b);
         return (Integer)restTemplate.getForEntity(serviceName+"/add?a=10&b=20", Integer.class).getBody();
-
+        //需要修改restTemplate
 //        return (Integer) restTemplate.postForObject(serviceName + "/add", parMap, Integer.class);
     }
 }

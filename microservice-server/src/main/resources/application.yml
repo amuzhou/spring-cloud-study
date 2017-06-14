@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:${server.eureka-port}/eureka/
+      defaultZone: http://127.0.0.1:${server.eureka-port}/eureka/
 spring:
   profiles:
     active: native
@@ -14,4 +14,4 @@ spring:
     config:
       server:
         native:
-           search-locations: file:/Users/zhoumeng750/Documents/idea/spring-cloud-study/config-repo
+           search-locations: file:/Users/zhoumeng/amuzhou/idea/amuzhou/spring-cloud-study/config-repo
