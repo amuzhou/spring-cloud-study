@@ -13,6 +13,9 @@
         <module>microservice-client</module>
         <module>microservice-server</module>
         <module>microservice-eureka-zone</module>
+        <module>microservice-eureka-zone-s1</module>
+        <module>microservice-eureka-zone-s2</module>
+        <module>microservice-eureka-zone-s3</module>
     </modules>
 
     <!-- 使用最新的spring-boot版本 -->

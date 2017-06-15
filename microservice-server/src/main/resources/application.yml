@@ -1,10 +1,13 @@
 server:
   port: 8040
   eureka-port: 8050
+  eureka-port-s1: 8051
+  eureka-port-s2: 8052
+  eureka-port-s3: 8053
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:${server.eureka-port}/eureka/
+      defaultZone: http://127.0.0.1:${eureka-port-s1}/eureka/
 spring:
   profiles:
     active: native

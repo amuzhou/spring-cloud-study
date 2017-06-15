@@ -1,0 +1,16 @@
+#spring:
+#  profiles:
+#    active: ${eureka.instance.hostname}
+  application:
+    name: eureka-server
+server:
+  port: 8051
+  next-port: 8052
+eureka:
+#  instance:
+#    hostname: zone-s1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://127.0.0.1:${server.next-port}/eureka/
